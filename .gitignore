@@ -1,0 +1,12 @@
+.ruby-version
+*.pyc
+*.egg-info
+# Temp, keep this because it's expensive to generate
+/pricing.json
+# Cached catalog
+/catalog/
+# Puppet temporary
+/puppet/ssl
+/puppet/var
+/puppet/masterless-enc
+
