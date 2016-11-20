@@ -57,7 +57,8 @@ def compile_catalog():
     catalog_file = relative_path('catalog', shellquote(env.host + ".json"))
 
     with open(catalog_file, 'wb') as catalog:
-        catalog.write(puppet('master', '--compile', env.host).split("\n", 1)[1])
+        json = puppet('master', '--compile', env.host)
+        catalog.write(json[json.index('{'):])
 
 @task
 def apply_catalog():
