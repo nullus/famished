@@ -137,8 +137,6 @@ def start_spot_instance(spot_price='0.03', image_id="ami-db704cb8", key_name="nu
         },
         })
 
-    from pprint import pprint
-    pprint(response)
 
     if len(response["SpotInstanceRequests"]) != 1:
         warn("Incorrect number of spot instance requests: ({0} expected 1)".format(len(response["SpotInstanceRequests"])))
@@ -167,8 +165,6 @@ def start_spot_instance(spot_price='0.03', image_id="ami-db704cb8", key_name="nu
                 },
             }],
         })
-
-    pprint(response)
 
     change_id = response['ChangeInfo']['Id']
 

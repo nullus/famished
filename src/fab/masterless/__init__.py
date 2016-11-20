@@ -78,7 +78,7 @@ def bootstrap():
 
     yamldir = puppet_get_var('yamldir')
 
-    for path in [yamldir, os.path.join(yamldir, 'facts'), relative_path('catalog')]:
+    for path in [puppet_get_var('vardir'), yamldir, os.path.join(yamldir, 'facts'), relative_path('catalog')]:
         try:
             os.mkdir(path)
         except OSError as expt:
