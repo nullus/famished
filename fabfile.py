@@ -116,7 +116,7 @@ def get_instance_public_ip(instance_id, wait=30, retry=6):
     abort("Failed to get public IP address")
 
 @task
-def start_spot_instance(spot_price='0.03', image_id="ami-db704cb8", key_name="null@dylan-laptop 20160517", instance_type='c4.large'):
+def start_spot_instance(spot_price='0.02', image_id="ami-db704cb8", key_name="null@dylan-laptop 20160517", instance_type='c3.large'):
     ec2 = boto3.client('ec2')
 
     response = ec2.request_spot_instances(SpotPrice=spot_price, InstanceCount=1, Type='one-time', LaunchSpecification={

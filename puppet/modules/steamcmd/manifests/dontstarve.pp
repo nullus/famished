@@ -4,7 +4,7 @@
 class steamcmd::dontstarve {
   exec { "/home/steam/steamcmd.sh +login anonymous +app_update 343050 validate +quit":
     creates => "/home/steam/Steam/steamapps/common/Don't Starve Together Dedicated Server/bin/dontstarve_dedicated_server_nullrenderer",
-    timeout => 900,
+    timeout => 1800,
     user => "steam",
     cwd => "/home/steam",
     environment => [

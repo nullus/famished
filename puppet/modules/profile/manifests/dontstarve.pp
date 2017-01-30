@@ -1,4 +1,4 @@
-# Class: profile::steamcmd
+# Class: profile::dontstarve
 #
 #
 class profile::dontstarve {

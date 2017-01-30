@@ -19,3 +19,11 @@ Probably best not to query the AWS price list too frequently, the EC2 offers JSO
 
     curl -O https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/current/index.json
 
+## ToDo
+
+- Add a package provider type for Steam
+- Build an ENC backend for masterless puppet
+- Automatically determine spot bid
+- Startup script for DST
+- Backup/monitor for spot termination
+-

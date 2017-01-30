@@ -67,7 +67,7 @@ def apply_catalog():
     catalog_file = relative_path('catalog', env.host + ".json")
 
     put(local_path=catalog_file, remote_path="catalog.json")
-    sudo("puppet apply --debug --catalog catalog.json", pty=True)
+    sudo("puppet apply --catalog catalog.json")
 
 @task
 def check(var):
